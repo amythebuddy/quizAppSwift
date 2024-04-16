@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33C9D79E2BCEE6A1007DDC94 /* endScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C9D79D2BCEE6A1007DDC94 /* endScreen.swift */; };
 		33CBC2842BC98CA900FA70AC /* quizBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33CBC2832BC98CA900FA70AC /* quizBackground.jpg */; };
 		33CBC2862BC98D2400FA70AC /* mainQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBC2852BC98D2400FA70AC /* mainQuiz.swift */; };
 		33EA69C92BC6FF2400F28C12 /* quizMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EA69C82BC6FF2400F28C12 /* quizMobileApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C9D79D2BCEE6A1007DDC94 /* endScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endScreen.swift; sourceTree = "<group>"; };
 		33CBC2832BC98CA900FA70AC /* quizBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quizBackground.jpg; sourceTree = "<group>"; };
 		33CBC2852BC98D2400FA70AC /* mainQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainQuiz.swift; sourceTree = "<group>"; };
 		33EA69C52BC6FF2400F28C12 /* quizMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 				33EA69C82BC6FF2400F28C12 /* quizMobileApp.swift */,
 				33EA69CA2BC6FF2400F28C12 /* ContentView.swift */,
 				33CBC2852BC98D2400FA70AC /* mainQuiz.swift */,
+				33C9D79D2BCEE6A1007DDC94 /* endScreen.swift */,
 				33CBC2832BC98CA900FA70AC /* quizBackground.jpg */,
 				33EA69CC2BC6FF2600F28C12 /* Assets.xcassets */,
 				33EA69CE2BC6FF2600F28C12 /* Preview Content */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EA69CB2BC6FF2400F28C12 /* ContentView.swift in Sources */,
+				33C9D79E2BCEE6A1007DDC94 /* endScreen.swift in Sources */,
 				33CBC2862BC98D2400FA70AC /* mainQuiz.swift in Sources */,
 				33EA69C92BC6FF2400F28C12 /* quizMobileApp.swift in Sources */,
 			);
