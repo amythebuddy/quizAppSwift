@@ -15,21 +15,37 @@ struct ContentView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .edgesIgnoringSafeArea(.all)
-                VStack(spacing: 200) {
+                VStack {
                     Text("Quiz Time")
                         .foregroundColor(.white)
                         .font(.system(size: 60))
                         .fontWeight(.bold)
-                    NavigationLink(destination: mainQuiz(), label: {Text("Begin")})
-                        .foregroundColor(.white)
+                        .padding(.bottom, 50)
+                    NavigationLink(destination: mainQuiz(), label: {Text("Animal Quiz")}) //go to the animal quiz
+                        .foregroundColor(.black)
                         .font(.system(size: 40))
-                        .frame(width: 250, height: 50)
-                        .background(.blue)
+                        .frame(width: 300, height: 200)
+                        .background(
+                            Image("shibaInu")
+                                .resizable()
+                        )
+                        .cornerRadius(10)
+                        .padding()
+                    NavigationLink(destination: historyQuiz(), label: {Text("History Quiz")})//go to the history quiz
+                        .foregroundColor(.black)
+                        .font(.system(size: 40))
+                        .frame(width: 300, height: 200)
+                        .background(
+                            Image("history")
+                                .resizable()
+                        )
+                        .padding()
                         .cornerRadius(10)
                 }
                 .padding()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

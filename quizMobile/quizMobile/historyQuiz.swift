@@ -1,30 +1,25 @@
 //
-//  mainQuiz.swift
+//  historyQuiz.swift
 //  quizMobile
 //
-//  Created by StudentAM on 4/12/24.
+//  Created by StudentAM on 4/17/24.
 //
 
 import SwiftUI
 
-struct Question { // create a model of a quesion
-    var question : String
-    var options: [String]
-    var answer: String
-}
 
-struct mainQuiz: View {
+struct historyQuiz: View {
     @State private var questions = [ // store 10 questions and all the options in here
-        Question(question: "1. The Brown Recluse is a venomous creature, but what is it?", options: ["Spider", "Snake", "Scorpion", "Frog"], answer: "Spider"),
-        Question(question: "2. Shiba Inus are small hunting dogs native to which country?", options: ["China", "Uzbekistan", "Japan", "France"], answer: "Japan"),
-        Question(question: "3. What is the largest living species of lizard?", options: ["Malayan water monitor", "Tree crocodile", "Perentie", "Komodo dragon"], answer: "Komodo dragon"),
-        Question(question: "4. In the wild, Siberian tigers eat all of these, EXCEPT:", options: ["Pikas", "Elk", "Dik-diks", "Bears"], answer: "Dik-diks"),
-        Question(question: "5. The name caracal comes from a Turkish word meaning:", options: ["Royal cat", "Black ears", "Sharp tooth", "Golden lynx"], answer: "Black ears"),
-        Question(question: "6. Starfish primarily eat:", options: ["Sand worms", "Mollusks", "Algae", "Tuna"], answer: "Mollusks"),
-        Question(question: "7. How are platypuses are different from most other mammals?", options: ["They are cold-blooded", "They have gills", "They have pouches", "They lay eggs"], answer: "They lay eggs"),
-        Question(question: "8. Wolverines are a kind of:", options: ["Skunk", "Wolf", "Bear", "Weasel"], answer: "Weasel"),
-        Question(question: "9. The name narwhal derives from the old Norse word nar, which means:", options: ["Whale", "Corpse", "Horn", "Fish"], answer: "Corpse"),
-        Question(question: "10. How do toucans sleep?", options: ["Standing up", "Hanging upside down", "Climbing", "Laying"], answer: "Hanging upside down")
+        Question(question: "1. The United States bought Alaska from which country?", options: ["Canada", "Mexico", "China", "Russia"], answer: "Russia"),
+        Question(question: "2. Where did the Industrial Revolution begin?", options: ["United States", "France", "Great Britain", "Germany"], answer: "Great Britain"),
+        Question(question: "3. Which country was the first to grant women the right to vote?", options: ["United States", "New Zealand", "United Kingdom", "France"], answer: "New Zealand"),
+        Question(question: "4. What event marked the beginning of World War II?", options: ["Invasion of Poland by Germany", "Bombing of Pearl Harbor", "Assassination of Archduke Franz Ferdinand", "The signing of the Treaty of Versailles"], answer: "Invasion of Poland by Germany"),
+        Question(question: "5. What was the deadliest pandemic in history?", options: ["The Spanish Flu", "The Plague of Justinian", "The HIV/AIDS pandemic", "The Black Death"], answer: "The Black Death"),
+        Question(question: "6. During which century did the Renaissance begin?", options: ["14th Century", "15th Century", "16th Century", "17th Century"], answer: "14th Century"),
+        Question(question: "7. What year did the Berlin Wall fall?", options: ["1987", "1989", "1991", "1993"], answer: "1989"),
+        Question(question: "8. Which war is often called “The Forgotten War”?", options: ["The Vietnam War", "World War I", "The Gulf War", "The Korean War"], answer: "The Korean War"),
+        Question(question: "9. What was the original purpose of the Great Wall of China?", options: ["To prevent invasions and raids from nomadic tribes", "To mark the boundary of the empire", "As a trade route", "As a symbol of power"], answer: "To prevent invasions and raids from nomadic tribes"),
+        Question(question: "10. Which ancient civilization built the Machu Picchu complex?", options: ["The Aztecs", "The Mayans", "The Incas", "The Olmecs"], answer: "The Incas")
     ]
     @State var score = 0
     @State private var showAnswer = false
@@ -33,7 +28,7 @@ struct mainQuiz: View {
     @State var amountOfCurrentQuestion = 0 // to track how many questions has the user answered
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack{
                 Image("quizBackground")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -55,7 +50,7 @@ struct mainQuiz: View {
                         Button(option, action: {
                             amountOfCurrentQuestion += 1
                             checkAnswers(selectedOptions: option) // check if the selected option is correct
-                            if amountOfCurrentQuestion == questions.count { // if the user reach the last question
+                            if amountOfCurrentQuestion == questions.count {// if the user reach the last question
                                 isNextBtnVisible = false // hide the next button
                             } else {
                                 isNextBtnVisible = true // show the next button
@@ -72,10 +67,9 @@ struct mainQuiz: View {
                             .padding(5)
                             .cornerRadius(10)
                             .disabled(isNextBtnVisible) // all buttons are disabled when isNextBtnVisible are true
-                        
                     }
-                    if amountOfCurrentQuestion == questions.count { // if the user reach the last question
-                        NavigationLink(destination: endScreen(score: score), label: {  // create a new navigationLink that has Next
+                    if amountOfCurrentQuestion == questions.count {
+                        NavigationLink(destination: endScreen(score: score), label: { // create a new navigationLink that has Next
                             Text("Next")
                                 .frame(width: 150, height: 40)
                                 .background(.blue)
@@ -97,6 +91,7 @@ struct mainQuiz: View {
                         .padding(.top, 30)
                     }
                     Spacer()
+                    
                 }
             }
         }
@@ -111,5 +106,5 @@ struct mainQuiz: View {
 }
 
 #Preview {
-    mainQuiz()
+    historyQuiz()
 }
